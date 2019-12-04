@@ -42,7 +42,7 @@ const SinglyLinkedList = class {
     }
 
 };
-//My Code Section Begins
+
 function printSinglyLinkedList(node, sep, ws) {
     while (node != null) {
         ws.write(String(node.data));
