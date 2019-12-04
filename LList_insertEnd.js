@@ -54,8 +54,8 @@ function printSinglyLinkedList(node, sep, ws) {
         }
     }
 }
-//My Code Section Ends
 
+//My Code Section Begins
 function insertNodeAtTail(head, data) {
     let node1=new SinglyLinkedListNode(data);
     if(head===null){
@@ -70,6 +70,7 @@ function insertNodeAtTail(head, data) {
     }
     return head;
 }
+//My Code Section Ends
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
