@@ -1,0 +1,77 @@
+/*
+Question in Hackerrrank:
+Print the Elements of a Linked List
+*/
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.replace(/\s*$/, '')
+        .split('\n')
+        .map(str => str.replace(/\s*$/, ''));
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+const SinglyLinkedListNode = class {
+    constructor(nodeData) {
+        this.data = nodeData;
+        this.next = null;
+    }
+};
+
+const SinglyLinkedList = class {
+    constructor() {
+        this.head = null;
+        this.tail = null;
+    }
+
+    insertNode(nodeData) {
+        const node = new SinglyLinkedListNode(nodeData);
+
+        if (this.head == null) {
+            this.head = node;
+        } else {
+            this.tail.next = node;
+        }
+
+        this.tail = node;
+    }
+};
+
+//My Code Begins
+function printLinkedList(head){
+    let current=head;
+    while(current){
+        console.log(current.data);
+        current=current.next;
+    }
+}
+//My Code Ends
+
+
+function main() {
+    const llistCount = parseInt(readLine(), 10);
+
+    let llist = new SinglyLinkedList();
+
+    for (let i = 0; i < llistCount; i++) {
+        const llistItem = parseInt(readLine(), 10);
+        llist.insertNode(llistItem);
+    }
+
+    printLinkedList(llist.head);
+}
