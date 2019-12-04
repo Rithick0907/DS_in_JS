@@ -1,3 +1,8 @@
+/*
+Question in HackerRank:
+Insert a Node at the Tail of a Linked List
+*/
+
 'use strict';
 
 const fs = require('fs');
@@ -37,7 +42,7 @@ const SinglyLinkedList = class {
     }
 
 };
-
+//My Code Section Begins
 function printSinglyLinkedList(node, sep, ws) {
     while (node != null) {
         ws.write(String(node.data));
@@ -49,18 +54,8 @@ function printSinglyLinkedList(node, sep, ws) {
         }
     }
 }
+//My Code Section Ends
 
-// Complete the insertNodeAtTail function below.
-
-/*
- * For your reference:
- *
- * SinglyLinkedListNode {
- *     int data;
- *     SinglyLinkedListNode next;
- * }
- *
- */
 function insertNodeAtTail(head, data) {
     let node1=new SinglyLinkedListNode(data);
     if(head===null){
