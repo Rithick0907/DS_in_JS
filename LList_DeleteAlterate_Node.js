@@ -49,3 +49,4 @@ LList.InsertEnd(5);
 LList.InsertEnd(6);
 LList.InsertEnd(7);
 console.log(alternateDelete(LList.head));
+}
