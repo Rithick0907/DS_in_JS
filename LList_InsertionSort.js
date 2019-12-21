@@ -35,7 +35,7 @@ function Insertion(head){
        }
        else{
            let prev=null;
-           while(sorted.data<current.data||sorted!==null)
+           while(sorted.data<current.data&&sorted!==null)
            {
                prev=sorted;
                sorted=sorted.next;
