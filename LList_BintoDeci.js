@@ -47,5 +47,5 @@ List.InsertEnd(1);
 List.InsertEnd(0);
 List.InsertEnd(0);
 List.InsertEnd(1);
-List.InsertEnd(00);
+List.InsertEnd(0);
 console.log(binTodeci(List.head));
