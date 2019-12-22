@@ -79,31 +79,32 @@ function printSinglyLinkedList(node, sep, ws) {
  */
  //My Code Begins
 function mergeLists(head1, head2) {
-    let dummy=new SinglyLinkedListNode(0);
-    let tail=dummy;
-    let headA=head1;
-    let headB=head2;
-    while(headA!==null||headB!==null)
-    if(headA===null){
-        tail.next=headB;
-        break;
-        }
-    else if(headB===null){
-        tail.next=headA;
-        break;
-    }
-    else{
-        if(headA.data<=headB.data){
-            tail.next=headA;
-            headA=headA.next;
+    let current1=head1;
+    let current2=head2;
+    let dummy=new SinglyLinkedList();
+    while(current1&&current2){
+        if(current1.data<=current2.data){
+            dummy.insertNode(current1.data);
+            current1=current1.next;
         }
         else{
-            tail.next=headB;
-            headB=headB.next;
+            dummy.insertNode(current2.data);
+            current2=current2.next;
         }
-        tail=tail.next;
     }
-    return dummy.next;
+    if(current1===null){
+        while(current2){
+            dummy.insertNode(current2.data);
+            current2=current2.next;
+        }
+    }
+    if(current2===null){
+        while(current1){
+            dummy.insertNode(current1.data);
+            current1=current1.next;
+        }
+    }
+    return dummy.head;
 }
  //My Code Ends
  
