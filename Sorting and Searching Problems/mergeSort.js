@@ -6,6 +6,7 @@ function mergeSort(a,low,high){
         merge(a,low,mid,high);
     }
 }
+//Heart of mergeSort is merge Procedure
 function merge(a,low,mid,high){
     let n1=mid+1-low;
     let n2=high-mid;
