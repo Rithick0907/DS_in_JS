@@ -11,7 +11,8 @@ function partition(a,low,high){
     let r=a[high];
     let i=low-1;
     for(let j=low;j<high;j++){
-        if(a[j]<r){
+        //For Descending order change the "<" to ">"
+        if(a[j]<=r){
             i++;
             let temp=a[j];
             a[j]=a[i];
