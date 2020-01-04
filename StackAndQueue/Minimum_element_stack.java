@@ -45,6 +45,7 @@ class GfG
 	    s.push(x);
 	    if(support.empty())     support.push(x);
 	    else{
+		 //For maximum element in stack we use x>=stack.peek()
 	        if(x<=support.peek())    support.push(x);
 	    }
     }	
