@@ -1,10 +1,16 @@
-package com.test123;
+/*package whatever //do not write package name here */
+//Question:Given a string S. The task is to print all permutations of a given string.in lexicographically increasing order.
 import java.util.*;
-public class StringPermutation {
-    static Set<String> s=new HashSet<>();     //Without Repetition.For with repetition we dont use hashset simply print result.
-    static void permutation(String str,String ans){
+import java.lang.*;
+import java.io.*;
+
+class StringPermutation {
+    static Scanner sc=new Scanner(System.in);
+    static TreeSet<String> s=new TreeSet<>();
+    public static void permutation(String str,String ans){
         if(str.length()==0){
             s.add(ans);
+            return;
         }
         for(int i=0;i<str.length();i++){
             char ch=str.charAt(i);
@@ -17,10 +23,15 @@ public class StringPermutation {
         while(it.hasNext()){
             System.out.print(it.next()+" ");
         }
+        System.out.println();
     }
-    public static void main(String[] args) {
-        String name="RA";
-        permutation(name,"");
-        print();
-    }
+	public static void main (String[] args) {
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+		    String str=sc.next();
+		    permutation(str,"");
+		    print();
+		    s.clear();
+		}
+	}
 }
