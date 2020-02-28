@@ -15,6 +15,13 @@ The output for each test case will  be space separated integers having -1
 if the stack is empty else the element poped out  or min element from the stack
 */
 //Driver Code in Website
+/*
+Algorithm:
+1.We maintain two stack.one is for maintain all the value we have in stack & another to maintain smallest value of the 1st stack
+2.In push operation if supporting stack is empty or it top element is greater then the upcoming element then push it into the support stack.
+3.In pop operation if support stack peek == main stack popped element the pop from support stack
+4.return support stack peek for getmin().
+*/
 class GfG
 {
     int minEle;
